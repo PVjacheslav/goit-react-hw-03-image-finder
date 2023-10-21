@@ -1,11 +1,11 @@
-import { BtnLoad } from "./Button.styled"
+import { ButtonLoad } from "./Button.styled"
 
-export const Btn = ({ onclick }) => {
+export const Button = ({ onClick }) => {
     return (
         <>
-            <BtnLoad type="button" onClick={onClick}>
+            <ButtonLoad type="button" onClick={onClick}>
                 Load more
-            </BtnLoad>
+            </ButtonLoad>
         </>
     )
 }
