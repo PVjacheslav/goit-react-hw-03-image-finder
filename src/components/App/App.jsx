@@ -47,7 +47,7 @@ export class App extends Component{
 
       const data = await API.getImages(searchName, currentPage);
 
-      if (data.hits.lenght === 0) {
+      if (data.hits.length === 0) {
         return toast.info('Sorry image not found...', {
           position: toast.POSITION.TOP_RIGHT,
         })
@@ -74,7 +74,7 @@ export class App extends Component{
       <div>
         <ToastContainer transition={Slide} />
         <SearchBar onSubmit={this.handleSubmit} />
-        {images.lenght > 0 ? (
+        {images.length > 0 ? (
           <ImageGallery images={images} />
         ) : (
             <p
@@ -88,7 +88,7 @@ export class App extends Component{
             </p>
         )}
         {isLoading && <Loader />}
-        {images.lenght > 0 && totalPages !== currentPage && !isLoading && (
+        {images.length > 0 && totalPages !== currentPage && !isLoading && (
           <Button onClick={this.LoadMore}/>
         )}
       </div>
